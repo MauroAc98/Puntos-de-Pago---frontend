@@ -1,0 +1,46 @@
+.paginator_right,
+.paginator_left {
+  cursor: pointer;
+  color: black;
+  border: none;
+  background-color: #ffff;
+}
+
+.paginator_left {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.paginator_right {
+  padding-right: 10px;
+  padding-left: 20px;
+}
+
+.paginator_left:disabled,
+.paginator_right:disabled {
+  cursor: default;
+  color: rgb(160, 160, 160);
+}
+
+.rows_per_page {
+  color: black;
+  user-select: none;
+}
+
+.current_page_report {
+  color: black;
+  user-select: none;
+  width: 120px;
+  text-align: center;
+}
+
+.paginator_class {
+  justify-content: center;
+  padding: 20px;
+}
+
+@media (max-width: 575px) {
+  .paginator_class {
+    justify-content: center;
+  }
+}

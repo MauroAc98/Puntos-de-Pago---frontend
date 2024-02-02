@@ -1,0 +1,17 @@
+FROM nginx:alpine
+
+#RUN apk update && apk add nano lsof
+RUN apk add npm
+WORKDIR /src
+COPY ./src .
+COPY ./docker/config/static-next.config.js ./next.config.js
+COPY ./docker/config/default.conf /etc/nginx/conf.d/default.conf
+COPY ./docker/config/building-app.html /usr/share/nginx/html/index.html
+COPY ./docker/config/building-app-image.png /usr/share/nginx/html/building-app-image.png
+
+COPY docker/entrypoint.sh /src/entrypoint.sh
+
+RUN chmod +x /src/entrypoint.sh
+ENTRYPOINT ["sh", "/src/entrypoint.sh"]
+
+# ENTRYPOINT [ "sh", "/entrypoint.sh" ]

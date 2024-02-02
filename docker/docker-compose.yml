@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  frontend:
+    image: ${NODE_IMG_NAME}
+    container_name: ${NODE_IMG_NAME}
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+      args:
+        node_version: ${NODE_VERSION}
+        node_port_expose: ${NODE_PORT_EXPOSE}
+    networks:
+      - network_project
+    env_file:
+      - .env
+    volumes:
+      - ./config/SSL:/SSL
+      #- ../src:/src
+    ports:
+      - "${NODE_PORT_HOST}:${NODE_PORT_EXPOSE}"
+    restart: unless-stopped
+networks:
+  network_project:
+    name: ${PROJECT_NETWORK_NAME}
+    driver: bridge

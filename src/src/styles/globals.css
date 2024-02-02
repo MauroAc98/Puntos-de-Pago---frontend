@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+/* VARIABLES */
+:root {
+  --gradient_rentas: linear-gradient(90deg, #622c6b 13.63%, #b40c51 91.13%);
+  --gradient_rentas_invert: linear-gradient(90deg, #b40c51 13.63%, #622c6b 91.13%);
+}
+
+/* END VARIABLES */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif !important;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.p-dropdown-item {
+  white-space: wrap !important;
+}
+
+.p-component {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.p-fieldset {
+  padding: 15px;
+}
+
+.p-inputtext {
+  width: 100%;
+}
+
+/* FOCUS DE ACCORDIONS */
+.p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: none !important;
+}
+
+/* TOAST MESSAGES */
+
+@media screen and (max-width: 575px) {
+  .p-toast {
+    margin-left: 20px;
+    width: auto !important;
+  }
+}
+
+.p-toast-message-content {
+  justify-content: space-between;
+}
+
+.content_cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 115px;
+  font-size: 18px;
+}
+
+.content_cart .btn_pagar {
+  width: 100px;
+}
+
+/* BUTTONS */
+.button-pdp {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+  border: 1.5px solid #4f2255 !important;
+  border-radius: 10px !important;
+}
+
+.btn_violet {
+  padding: 13px 34px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+  border: 1.5px solid #4f2255 !important;
+  border-radius: 10px !important;
+}
+
+.p-progressbar-value::before {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+}
+
+.p-progressbar-value::after {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+}
+
+.btn_generar_cep {
+  padding: 13px 80px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+  border: 1.5px solid #4f2255 !important;
+  border-radius: 10px !important;
+}
+
+.btn_white {
+  background: linear-gradient(0deg, #ffffff, #ffffff), #e9e5ed !important;
+  border: 1.5px solid #cac4d0 !important;
+  border-radius: 10px !important;
+  color: #622c6b !important;
+  padding: 13px 34px !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 575px) {
+
+  .btn_violet,
+  .btn_white {
+    padding: 13px 12px !important;
+  }
+}
+
+.btn_white:hover {
+  background: linear-gradient(0deg, #ffffff, #ffffff), #e9e5ed !important;
+  color: #622c6b !important;
+  border: 1.5px solid #cac4d0 !important;
+}
+
+.item-active {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(90deg, #622c6b 0%, #b40c51 102.44%) !important;
+  color: #ffff !important;
+  border-radius: 5px;
+}
+
+.color-icon-active {
+  color: #ffff !important;
+}
+
+.btn_accion {
+  background: #ffffff !important;
+  color: #622c6b !important;
+  border: 1.5px solid #622c6b !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+}
+
+.btn_accion:hover {
+  background: #b40c51 !important;
+  color: #fff !important
+}
+
+.p-accordion-content {
+  padding: 0px !important;
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column;
+}
+
+/* DATATABLES */
+.p-datatable .p-datatable-tbody>tr.p-highlight {
+  background: #ffff !important;
+  color: black !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+  border-color: #ba115d !important;
+  background: #ba115d !important;
+}
+
+.row_selected {
+  background: #381434 !important;
+}
+
+.row_selected td {
+  color: #ffff;
+}
+
+.action_btn_table {
+  font-size: 20px !important;
+  cursor: pointer;
+  color: #622c6b;
+}
+
+.action_btn_table_delete {
+  margin-right: -1.3rem;
+  font-size: 20px !important;
+  cursor: pointer;
+  color: #622c6b;
+}
+
+.row_selected .action_btn_table {
+  color: #ffff;
+}
+
+.row_selected .action_btn_table_delete {
+  color: #ffff;
+}
+
+.custom_dialog_header {
+  background: #4f2255 !important;
+  border-color: #4f2255 !important;
+  color: #ffff !important;
+  font-size: 15px !important;
+}
+
+.payment_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  max-width: 100%;
+}
+
+.payment_img_epago {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  max-width: 100%;
+}
+
+.payment_img_epago img {
+  object-fit: contain;
+  width: 90%;
+  height: 90%;
+}
+
+/* Estilos para el contenedor principal */
+.cancelada-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-button:enabled:hover,
+.p-button:not(button):not(a):not(.p-disabled):hover {
+  filter: brightness(90%)
+}
+
+/* Estilos para el fondo con opacidad */
+.cancelada-opacity-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Estilos para el texto */
+.cancelada-text {
+  position: relative;
+  max-width: 85%;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  text-align: center;
+  background: var(--gradient_rentas);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .cancelada-text {
+    max-width: 40%;
+    font-size: 1.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment_img img {
+    object-fit: contain;
+    width: 80%;
+    height: 80%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .grid-custom .order-md-1 {
+    order: 1;
+  }
+
+  .grid-custom .order-md-2 {
+    order: 2;
+  }
+
+  .grid-custom .order-md-3 {
+    order: 3;
+  }
+}

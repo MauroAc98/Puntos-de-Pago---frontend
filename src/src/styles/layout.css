@@ -1,0 +1,194 @@
+/* NAVBAR */
+.header {
+  background: var(--gradient_rentas);
+  padding: 18px 48px 18px 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: hsl(0, 0%, 100%);
+}
+
+.titleSinDeuda {
+  background: var(--gradient_rentas);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.left_side {
+  display: flex;
+}
+
+.left_side .bars_icon,
+.page_title {
+  display: flex;
+  align-items: center;
+}
+
+.left_side .bars_icon i {
+  font-size: 25px;
+  margin-right: 35px;
+}
+
+.left_side .page_title {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.rigth_side {
+  display: flex;
+}
+
+.rigth_side .wallet_icon,
+.logout_icon,
+.user_text {
+  display: flex;
+  align-items: center;
+}
+
+.left_side .bars_icon i {
+  cursor: pointer;
+}
+
+.rigth_side .wallet_icon i,
+.logout_icon i {
+  cursor: pointer;
+}
+
+.wallet_badge {
+  background-color: #ffff !important;
+  color: #4f2255 !important;
+  border: solid 1px #4f2255 !important;
+}
+
+.rigth_side .wallet_icon i {
+  margin-right: 35px;
+  font-size: 25px !important;
+}
+
+.rigth_side .logout_icon i {
+  font-size: 25px !important;
+}
+
+.rigth_side .user_text {
+  font-weight: 500;
+  font-size: 20px !important;
+  margin-right: 42px;
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 25px 30px 25px 30px;
+  }
+
+  .left_side .bars_icon i {
+    font-size: 21px;
+  }
+
+  .left_side .page_title {
+    font-size: 17px;
+  }
+
+  .rigth_side .user_text {
+    display: none;
+  }
+
+  .rigth_side .wallet_icon i {
+    font-size: 21px !important;
+  }
+
+  .rigth_side .logout_icon i {
+    font-size: 21px !important;
+  }
+}
+
+.item_sidebar:hover {
+  background-color: #b3b3b3;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.item_sidebar {
+  font-size: 20px;
+  color: #495057;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.item_sidebar i {
+  font-size: 20px;
+  color: #3b3b3b;
+}
+
+.item_active {
+  background: var(--gradient_rentas_invert);
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* CARRITO */
+.cart {
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 3%), 0px 0px 2px rgb(0 0 0 / 6%),
+    0px 2px 6px rgb(0 0 0 / 12%) !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  text-align: center !important;
+  border-color: var(--surface-400) !important;
+  width: 380px !important;
+  top: 66px;
+}
+
+/* Position */
+@media (max-width: 767px) {
+  .cart {
+    top: 46px;
+  }
+}
+
+.cart .p-dialog-header {
+  border-bottom: none !important;
+  padding-bottom: 0px !important;
+}
+
+.cart .content_cart {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4d4d4d;
+}
+
+.cart .btn_pagar {
+  padding: 8px 20px;
+}
+
+/* END NAVBAR */
+
+/* PAGE */
+.container_page {
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-bottom: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container_page {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container_page {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container_page {
+    width: 90%;
+  }
+}

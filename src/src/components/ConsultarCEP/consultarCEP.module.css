@@ -1,0 +1,30 @@
+/* FORMULARIO DE BUSQUEDA */
+.calendar button {
+  background: #ffff;
+  color: #622c6b;
+  border: 1px solid #ced4da;
+}
+
+.calendar button:hover {
+  background: #ffff !important;
+  color: #622c6b !important;
+  border: 1px solid #ced4da !important;
+}
+
+.custom_dialog {
+  margin-top: 40px !important;
+  width: 80vw;
+  border-bottom: none !important;
+}
+
+.custom_dialog__header {
+  border-bottom: none !important;
+  padding-top: 30px !important;
+}
+
+
+@media (max-width: 767px) {
+  .custom_dialog {
+    width: 95vw;
+  }
+}

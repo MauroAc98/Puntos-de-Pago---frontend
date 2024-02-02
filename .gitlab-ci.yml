@@ -1,0 +1,22 @@
+stages:
+  - deploy
+
+01_cleanup-job:
+  stage: deploy
+  script:
+    - echo "Remove Container and Image $CI_PROJECT_NAME"
+    - docker-compose -f docker/docker-compose-static.yml down || true
+    - docker image rm "$CI_PROJECT_NAME" || true
+  tags:
+    - docker
+  only:
+    - deploy
+02_deploy-job:
+  stage: deploy
+  script:
+    - echo "Creating new image $CI_PROJECT_NAME"
+    - docker-compose -f docker/docker-compose-static.yml up -d --build
+  tags:
+    - docker
+  only:
+    - deploy
